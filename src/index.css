@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@theme {
+  --font-headline: "Noto Serif", serif;
+  --font-maverick-headline: "Noto Serif", serif;
+  --font-body: "Plus Jakarta Sans", sans-serif;
+  --font-maverick-label: "Plus Jakarta Sans", sans-serif;
+  
+  --color-brinqo-red: #e73250;
+  --color-brinqo-cream: #fcf9f2;
+  --color-brinqo-warm-cream: #f6f3ec;
+  --color-brinqo-soft-cream: #e5e2db;
+  
+  --color-brinqo-dark: #1c1c18;
+  --color-brinqo-secondary-dark: #1c1c18;
+  --color-brinqo-charcoal: #5b403f;
+  
+  --color-brinqo-light-text: #E2E2E2;
+  --color-brinqo-muted-text: #AB8888;
+}
+
+@layer base {
+  body {
+    @apply font-body antialiased;
+  }
+}
+
+@layer utilities {
+  .editorial-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 2rem;
+  }
+  .editorial-shadow {
+    box-shadow: 12px 12px 0px 0px #1c1c18;
+  }
+  .editorial-shadow-hover:hover {
+    box-shadow: 20px 20px 0px 0px rgba(231, 50, 80, 0.4);
+    transform: scale(1.02) translateY(-10px) rotate(0deg) !important;
+    z-index: 50 !important;
+  }
+  .vertical-text {
+    writing-mode: vertical-rl;
+  }
+  .text-outline {
+    -webkit-text-stroke: 1.5px #1c1c18;
+    color: transparent;
+  }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
