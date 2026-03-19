@@ -1,9 +1,7 @@
-import React from 'react';
-import Carousel from './ui/carousel';
+"use client";
 
-import './Projects.css';
-
-const Projects: React.FC = () => {
+import Carousel from "@/components/ui/carousel";
+export default function CarouselDemo() {
   const slideData = [
     {
       title: "Mystic Mountains",
@@ -26,26 +24,9 @@ const Projects: React.FC = () => {
       src: "https://images.unsplash.com/photo-1679420437432-80cfbf88986c?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
   ];
-
   return (
-    <div id="projects" className="projects-section dark-bg">
-      <div className="projects-container">
-        <div className="Brinqo-section-title center">
-          <h2>
-            <span className="hidden md:inline">Have a wide range of creative projects</span>
-            <span className="inline md:hidden">Our Projects</span>
-            <span className="Brinqo-title-icon ml-2 md:ml-4 inline-block align-middle pb-2 md:pb-4">
-              <img src="https://img.icons8.com/fluency/48/star.png" alt="Star decoration" className="w-8 md:w-12 h-auto" />
-            </span>
-          </h2>
-        </div>
-      </div>
-
-      <div className="px-4 md:px-12 pb-12">
-        <Carousel slides={slideData} />
-      </div>
+    <div className="relative overflow-hidden w-full h-full py-20">
+      <Carousel slides={slideData} />
     </div>
   );
-};
-
-export default Projects;
+}

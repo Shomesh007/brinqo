@@ -1,0 +1,10 @@
+# This file ensures the public directory is tracked by git
+# Add your favicon files here:
+# - favicon.ico
+# - favicon.svg
+# - apple-touch-icon.png
+# - favicon-16x16.png
+# - favicon-32x32.png
+# - icon-192x192.png
+# - icon-512x512.png
+# - og-image.jpg

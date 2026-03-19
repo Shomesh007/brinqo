@@ -1,27 +1,51 @@
+@import "@fontsource-variable/inter";
+@import "tw-animate-css";
 @import "tailwindcss";
 
 @theme {
-  --font-headline: "Noto Serif", serif;
-  --font-maverick-headline: "Noto Serif", serif;
-  --font-body: "Plus Jakarta Sans", sans-serif;
-  --font-maverick-label: "Plus Jakarta Sans", sans-serif;
-  
+  --font-syne: 'Syne', sans-serif;
+  --font-space: 'Space Grotesk', sans-serif;
+  --font-arimo: 'Arimo', sans-serif;
+  --font-familjen: 'Familjen Grotesk', sans-serif;
+  --font-bricolage: 'Bricolage Grotesque', sans-serif;
+  --font-baskerville: 'Libre Baskerville', serif;
+  --font-playfair: 'Playfair Display', serif;
+
+  --font-headline: 'Syne', sans-serif;
+  --font-body: 'Syne', sans-serif;
+  --font-maverick-headline: 'Syne', sans-serif;
+  --font-maverick-label: 'Syne', sans-serif;
+
   --color-brinqo-red: #e73250;
   --color-brinqo-cream: #fcf9f2;
   --color-brinqo-warm-cream: #f6f3ec;
   --color-brinqo-soft-cream: #e5e2db;
-  
+
   --color-brinqo-dark: #1c1c18;
   --color-brinqo-secondary-dark: #1c1c18;
   --color-brinqo-charcoal: #5b403f;
-  
+
   --color-brinqo-light-text: #E2E2E2;
   --color-brinqo-muted-text: #AB8888;
 }
 
 @layer base {
+  html,
+  body,
+  #root {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
   body {
-    @apply font-body antialiased;
+    @apply font-body antialiased bg-background text-foreground;
+  }
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    @apply font-sans;
   }
 }
 
@@ -48,4 +72,356 @@
   }
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.809 0.105 251.813);
+  --chart-2: oklch(0.623 0.214 259.815);
+  --chart-3: oklch(0.546 0.245 262.881);
+  --chart-4: oklch(0.488 0.243 264.376);
+  --chart-5: oklch(0.424 0.199 265.638);
+  --radius: 0.625rem;
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.205 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.922 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.556 0 0);
+  --chart-1: oklch(0.809 0.105 251.813);
+  --chart-2: oklch(0.623 0.214 259.815);
+  --chart-3: oklch(0.546 0.245 262.881);
+  --chart-4: oklch(0.488 0.243 264.376);
+  --chart-5: oklch(0.424 0.199 265.638);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.556 0 0);
+}
+
+@theme inline {
+  --font-sans: 'Inter Variable', sans-serif;
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-foreground: var(--foreground);
+  --color-background: var(--background);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+/* Brinqo Mobile Services Modern Scroll */
+.brinqo-services-modern {
+  width: 100%;
+  margin: 0;
+}
+
+.brinqo-services-modern .service-panel {
+  position: relative;
+  padding: 90px 28px;
+  isolation: isolate;
+  overflow: hidden;
+  transition: background-color .85s cubic-bezier(.22, 1, .36, 1), color .6s ease, transform .6s ease;
+}
+
+.brinqo-services-modern .service-panel:nth-child(odd) {
+  background: #f8e1b5;
+  color: #1c1c18;
+}
+
+.brinqo-services-modern .service-panel:nth-child(even) {
+  background: #1c1c18;
+  color: #f8e1b5;
+}
+
+.brinqo-services-modern .service-panel.is-active {
+  background: #E8272A;
+  color: #f8e1b5;
+  transform: translateY(-2px);
+}
+
+.brinqo-services-modern .service-panel::before,
+.brinqo-services-modern .service-panel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+  z-index: 0;
+  transition: opacity .55s ease;
+}
+
+.brinqo-services-modern .service-panel:nth-child(odd)::before {
+  background: linear-gradient(115deg,
+      rgba(255, 255, 255, 0) 20%,
+      rgba(255, 238, 200, .35) 48%,
+      rgba(255, 255, 255, 0) 80%);
+  transform: translateX(-120%);
+}
+
+.brinqo-services-modern .service-panel:nth-child(even)::before {
+  background: linear-gradient(115deg,
+      rgba(255, 255, 255, 0) 20%,
+      rgba(248, 225, 181, .25) 48%,
+      rgba(255, 255, 255, 0) 80%);
+  transform: translateX(-120%);
+}
+
+.brinqo-services-modern .service-panel::after {
+  background: radial-gradient(circle at 20% 20%, rgba(255, 238, 200, .3), transparent 60%);
+  mix-blend-mode: screen;
+}
+
+.brinqo-services-modern .service-panel.is-entering::before {
+  opacity: 1;
+  animation: serviceSweep 1.05s cubic-bezier(.22, 1, .36, 1) forwards;
+}
+
+.brinqo-services-modern .service-panel.is-entering::after {
+  opacity: 1;
+  animation: serviceGlow .9s ease-out forwards;
+}
+
+.brinqo-services-modern .service-inner {
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.brinqo-services-modern .service-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  transition: color .55s ease, transform .55s ease;
+}
+
+.brinqo-services-modern .service-panel:nth-child(odd) .service-meta {
+  color: #8a7f68;
+}
+
+.brinqo-services-modern .service-panel:nth-child(even) .service-meta {
+  color: #a89f88;
+}
+
+.brinqo-services-modern .service-panel.is-active .service-meta {
+  color: #f8e1b5;
+  transform: translateX(2px);
+}
+
+.brinqo-services-modern .service-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color .55s ease, box-shadow .55s ease;
+}
+.brinqo-services-modern .service-panel:nth-child(odd) .service-dot {
+  background: #E8272A;
+}
+
+.brinqo-services-modern .service-panel:nth-child(even) .service-dot {
+  background: #f8e1b5;
+}
+
+.brinqo-services-modern .service-panel.is-active .service-dot {
+  background: #f8e1b5;
+  box-shadow: 0 0 20px rgba(248, 225, 181, .55);
+}
+
+.brinqo-services-modern .service-title {
+  margin: 0 0 24px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(56px, 9vw, 124px);
+  font-weight: 700;
+  line-height: .9;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+  transition: transform .65s cubic-bezier(.22, 1, .36, 1), letter-spacing .65s cubic-bezier(.22, 1, .36, 1);
+}
+
+.brinqo-services-modern .service-panel.is-active .service-title {
+  transform: translateY(-2px);
+  letter-spacing: -0.045em;
+}
+
+.brinqo-services-modern .service-copy {
+  margin: 0;
+  width: 100%;
+  max-width: 760px;
+  font-size: clamp(22px, 2.2vw, 36px);
+  line-height: 1.45;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transform: translateY(18px);
+  clip-path: inset(0 0 100% 0);
+  pointer-events: none;
+  transition: color .55s ease,
+    opacity .55s cubic-bezier(.22, 1, .36, 1),
+    transform .55s cubic-bezier(.22, 1, .36, 1),
+    max-height .7s cubic-bezier(.22, 1, .36, 1),
+    clip-path .7s cubic-bezier(.22, 1, .36, 1);
+}
+
+.brinqo-services-modern .service-panel.is-active .service-copy {
+  max-height: 520px;
+  opacity: .96;
+  transform: translateY(0);
+  clip-path: inset(0 0 0 0);
+  pointer-events: auto;
+}
+
+@keyframes serviceSweep {
+  0% { transform: translateX(-120%); opacity: 0; }
+  20% { opacity: 1; }
+  100% { transform: translateX(120%); opacity: 0; }
+}
+
+@keyframes serviceGlow {
+  0% { opacity: 0; }
+  35% { opacity: .45; }
+  100% { opacity: 0; }
+}
+
+.desktop-hero-stage {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 24px;
+  overflow: hidden;
+  background: #f3e2bf;
+}
+
+.desktop-hero-layer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.7s ease;
+}
+
+.desktop-hero-video {
+  transform: scale(1.08);
+  transform-origin: center center;
+}
+
+.desktop-hero-final {
+  transform: scale(1.08);
+  transform-origin: center center;
+}
+
+.desktop-hero-layer.is-visible {
+  opacity: 1;
+}
+
+@media (max-width: 991.98px) {
+  .brinqo-services-modern .service-panel {
+    min-height: auto;
+    display: flex;
+    align-items: flex-start;
+    padding: 48px 16px;
+  }
+  .brinqo-services-modern .service-meta {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+  .brinqo-services-modern .service-dot {
+    width: 12px;
+    height: 12px;
+  }
+  .brinqo-services-modern .service-title {
+    font-size: clamp(46px, 13vw, 68px);
+    margin-bottom: 10px;
+  }
+  .brinqo-services-modern .service-copy {
+    font-size: clamp(16px, 4.8vw, 24px);
+    max-width: 100%;
+  }
+  .brinqo-services-modern .service-panel.is-active .service-copy {
+    max-height: 420px;
+  }
+}

@@ -1,12 +1,248 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- Basic Meta Tags -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Google AI Studio App</title>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <title>Brinqo Design Agency | UI/UX, Web & Graphic Design Services</title>
+    <meta name="description" content="Professional digital marketing agency specializing in UI/UX design, web design, graphic design, motion graphics, and brand audit services. Transform your brand with Brinqo." />
+    <meta name="keywords" content="digital marketing agency, web design services, UI/UX design, graphic design agency, brand identity design, motion graphics, creative agency USA, brand audit services, digital branding solutions" />
+    <meta name="author" content="Brinqo Design Agency" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="en-US" />
+    <meta http-equiv="content-language" content="en-US" />
+    <link rel="canonical" href="https://brinqo.com/" />
+    <link rel="alternate" hreflang="en-US" href="https://brinqo.com/" />
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Brinqo Design Agency | UI/UX, Web & Graphic Design Services" />
+    <meta property="og:description" content="Professional digital marketing agency specializing in UI/UX design, web design, graphic design, motion graphics, and brand audit services." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://brinqo.com/" />
+    <meta property="og:image" content="https://brinqo.com/og-image.jpg" />
+    <meta property="og:site_name" content="Brinqo Design Agency" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Brinqo Design Agency | UI/UX, Web & Graphic Design Services" />
+    <meta name="twitter:description" content="Professional digital marketing agency specializing in UI/UX design, web design, graphic design, motion graphics, and brand audit services." />
+    <meta name="twitter:image" content="https://brinqo.com/og-image.jpg" />
+
+    <!-- Mobile Optimization Meta Tags -->
+    <meta name="theme-color" content="#E63946" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <!-- Favicon and Icons -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/icon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/icon-512x512.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+
+    <!-- Performance Optimization -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+
+    <!-- JSON-LD Structured Data: Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Brinqo Design Agency",
+      "url": "https://brinqo.com",
+      "logo": "https://brinqo.com/logo.png",
+      "telephone": "(508) 446-2526",
+      "email": "mail@brinqo.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "US"
+      },
+      "sameAs": [
+        "https://www.facebook.com/brinqo",
+        "https://www.instagram.com/brinqo",
+        "https://twitter.com/brinqo",
+        "https://www.linkedin.com/company/brinqo"
+      ]
+    }
+    </script>
+
+    <!-- JSON-LD Structured Data: LocalBusiness -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Brinqo Design Agency",
+      "image": "https://brinqo.com/logo.png",
+      "priceRange": "$$",
+      "telephone": "(508) 446-2526",
+      "email": "mail@brinqo.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "US"
+      }
+    }
+    </script>
+
+    <!-- JSON-LD Structured Data: UI/UX Design Service -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "UI/UX Design Services",
+      "provider": {
+        "@type": "Organization",
+        "name": "Brinqo Design Agency"
+      },
+      "areaServed": "US",
+      "description": "Professional UI/UX design services creating intuitive and engaging user experiences for web and mobile applications"
+    }
+    </script>
+
+    <!-- JSON-LD Structured Data: Graphic Design Service -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Graphic Design Services",
+      "provider": {
+        "@type": "Organization",
+        "name": "Brinqo Design Agency"
+      },
+      "areaServed": "US",
+      "description": "Creative graphic design services including logos, branding materials, brochures, and marketing collateral"
+    }
+    </script>
+
+    <!-- JSON-LD Structured Data: Web Design Service -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Web Design Services",
+      "provider": {
+        "@type": "Organization",
+        "name": "Brinqo Design Agency"
+      },
+      "areaServed": "US",
+      "description": "High-performance web design services optimized for speed, functionality, and conversion"
+    }
+    </script>
+
+    <!-- JSON-LD Structured Data: Motion Graphics Service -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Motion Graphics Services",
+      "provider": {
+        "@type": "Organization",
+        "name": "Brinqo Design Agency"
+      },
+      "areaServed": "US",
+      "description": "Dynamic motion graphics and animation services that bring brand narratives to life through kinetic storytelling"
+    }
+    </script>
+
+    <!-- JSON-LD Structured Data: Brand Audit Service -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Brand Audit Services",
+      "provider": {
+        "@type": "Organization",
+        "name": "Brinqo Design Agency"
+      },
+      "areaServed": "US",
+      "description": "Comprehensive AI-powered brand audit services analyzing brand presence, design consistency, and content strategy"
+    }
+    </script>
+
+    <!-- JSON-LD Structured Data: WebSite with Search Action -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Brinqo Design Agency",
+      "url": "https://brinqo.com",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://brinqo.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+
+    <!-- JSON-LD Structured Data: BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://brinqo.com/"
+        }
+      ]
+    }
+    </script>
+
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+    <!-- Replace GA_MEASUREMENT_ID with your actual Google Analytics 4 Measurement ID -->
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+    <!-- End Google Tag Manager -->
+    <!-- Replace GTM-XXXXXXX with your actual Google Tag Manager ID -->
+
+    <!-- Facebook Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'YOUR_PIXEL_ID');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Facebook Pixel Code -->
+    <!-- Replace YOUR_PIXEL_ID with your actual Facebook Pixel ID -->
   </head>
   <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
