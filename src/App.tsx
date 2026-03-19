@@ -687,16 +687,16 @@ const ServiceIconBox: React.FC<ServiceIconBoxProps & { id: string }> = ({ icon, 
       transition={{ duration: 0.8, delay }}
       className="relative h-full"
     >
-      <div className={`relative p-10 lg:p-12 rounded-[1.75rem] border-2 border-brinqo-secondary-dark transition-all duration-500 h-full min-h-[360px] flex flex-col cursor-pointer group ${accent ? 'bg-[#ece2d8]' : 'bg-[#f5f2ea]'} hover:bg-brinqo-red hover:-translate-y-1 hover:shadow-[0_16px_40px_rgba(231,50,80,0.22)]`}>
-        <div className="mb-8 w-14 h-14 lg:w-16 lg:h-16 text-brinqo-secondary-dark transition-all duration-500 group-hover:scale-105 group-hover:text-brinqo-cream origin-left">
+      <div className={`relative p-8 lg:p-10 rounded-[1.75rem] border-2 border-brinqo-secondary-dark transition-all duration-500 h-full min-h-[300px] flex flex-col cursor-pointer group ${accent ? 'bg-[#ece2d8]' : 'bg-[#f5f2ea]'} hover:bg-brinqo-red hover:-translate-y-1 hover:shadow-[0_16px_40px_rgba(231,50,80,0.22)]`}>
+        <div className="mb-6 w-14 h-14 lg:w-16 lg:h-16 text-brinqo-secondary-dark transition-all duration-500 group-hover:scale-105 group-hover:text-brinqo-cream origin-left">
           {icon}
         </div>
 
         <div className="flex-grow max-w-[90%]">
-          <h3 className="font-space font-bold text-4xl lg:text-[3.2rem] tracking-[-0.04em] mb-6 text-brinqo-secondary-dark leading-[0.95] transition-colors duration-500 group-hover:text-brinqo-cream">
+          <h3 className="font-space font-bold text-3xl lg:text-[2.8rem] tracking-[-0.04em] mb-4 text-brinqo-secondary-dark leading-[1] transition-colors duration-500 group-hover:text-brinqo-cream">
             {title}
           </h3>
-          <p className="font-arimo text-brinqo-secondary-dark/85 text-xl lg:text-[2rem] leading-[1.45] mb-10 transition-colors duration-500 group-hover:text-brinqo-cream/90">
+          <p className="font-arimo text-brinqo-secondary-dark/85 text-lg lg:text-[1.75rem] leading-[1.4] mb-8 transition-colors duration-500 group-hover:text-brinqo-cream/90">
             {desc}
           </p>
         </div>
