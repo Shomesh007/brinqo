@@ -786,9 +786,9 @@ function HomePage() {
         <DesktopHero />
 
         {/* Services Section */}
-        <section id="brand-audit" className="pt-24 pb-12 px-6 md:px-10 lg:px-12 w-full max-w-none mx-auto scroll-mt-28">
+        <section id="brand-audit" className="pt-12 md:pt-16 pb-8 md:pb-10 px-6 md:px-10 lg:px-12 w-full max-w-none mx-auto scroll-mt-28">
           {/* Desktop Title Header (Restored) */}
-          <div className="hidden md:block mb-14 md:mb-16 text-center">
+          <div className="hidden md:block mb-8 md:mb-10 text-center">
             <h2 className="font-bricolage font-extrabold text-[3rem] tracking-tight text-black leading-[1.05] md:text-[5.4rem] md:leading-[1.02]">
               We provide effective <br className="hidden md:block"/>
               <span className="Brinqo-title-animation relative inline-block">
@@ -809,7 +809,7 @@ function HomePage() {
           </div>
 
           {/* Desktop Grid */}
-          <div className="relative hidden md:grid grid-cols-2 gap-7 lg:gap-8 mb-8 w-full">
+          <div className="relative hidden md:grid grid-cols-2 gap-5 lg:gap-6 mb-8 w-full">
             {services.map((s, idx) => (
               <ServiceIconBox 
                 key={s.id} 
